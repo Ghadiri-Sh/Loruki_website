@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300;400;700&family=Poppins:wght@300&family=Roboto+Mono:ital,wght@0,600;1,100&display=swap");
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error--color: #d9534f;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  /* background: rgba(0, 0, 0, 0.2); */
+}
+/* NavBar */
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+p {
+  margin: 10px 0;
+}
+img {
+  width: 100%; /* it means the img fit in the container  */
+}
+.navbar .flex {
+  justify-content: space-between;
+}
+.navbar {
+  background: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar a {
+  padding: 10px;
+  margin: 0 5px;
+  color: #fff;
+}
+.navbar a:hover {
+  border-bottom: #fff 0.5px solid;
+}
+/* bot form */
+.hidden {
+  display: none;
+  /* it is still there but not display 
+  visibility: hidden;
+  height: 0; */
+}
+/* Showcase or Hero part  */
+.showcase {
+  height: 400px;
+  /* width: 115%;  i added this */
+  background: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+.showcase h1 {
+  font-size: 40px;
+}
+.showcase p {
+  font-size: 12px;
+  margin: 30px 0;
+}
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  /* gap: 30px; */
+  overflow: visible;
+}
+.showcase-text {
+  animation: SlideInFromLeft 1s ease-in;
+}
+.showcase-form {
+  position: relative;
+  top: 100px;
+
+  height: 350px;
+  width: 300px;
+  /* always in front of everything */
+  z-index: 100;
+  /* for push the form to right */
+  /* justify-self: flex-end; */
+  animation: SlideInFromRight 1s ease-in;
+}
+.showcase-form .form-control {
+  margin: 20px 0;
+}
+.showcase-form .form-control input[type="text"],
+.showcase-form .form-control input[type="email"] {
+  border: 0;
+  width: 100%;
+  border-bottom: #333 solid 1px;
+  font-size: 17px;
+  padding: 10px 0;
+}
+.showcase-form input:focus {
+  outline: none;
+}
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  right: 0px;
+  left: 0;
+  bottom: -70px;
+  background: rgba(255, 255, 255);
+  -webkit-transform: skewY(-3deg); /*chorom & safari prefix browser*/
+  -ms-transform: skewY(-3deg); /*ms & IE  prefix browser*/
+  transform: skewY(-3deg);
+}
+/* Stats */
+.stats {
+  padding-top: 100px;
+  animation: SlideInFromBottom 1s ease-in;
+}
+.stats .grid h3 {
+  font-size: 28px;
+}
+.text-secondary {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* CLI IMG */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.cli .grid *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.cli .card {
+  max-height: 50px;
+  width: 300px;
+}
+/* Cloud Hosting */
+.cloud .grid {
+  grid-template-columns: 4fr, 3fr;
+}
+/* suported languages  */
+.languages .flex {
+  flex-wrap: wrap;
+}
+.languages .card {
+  height: 130px;
+  text-align: center;
+  transition: transform 0.2s ease-in;
+}
+.languages .card h4 {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.languages .card:hover {
+  /* transform: scale(1.2); */
+  transform: translateY(-9.5px);
+}
+/* Features Page */
+.features-head img,
+.docs-head img {
+  width: 200px;
+  justify-self: flex-end;
+}
+.features-head {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.subheading img {
+  width: 250px;
+  justify-self: flex-end;
+}
+
+.main .container .card > i {
+  margin-right: 20px;
+}
+.main .container .card {
+  height: auto;
+}
+
+.main .grid {
+  grid-template-rows: 3, 1fr;
+}
+.main .grid *:first-child {
+  grid-column: 1 / span 3;
+}
+.main .grid *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+.main .card p {
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+/* Docs Main  */
+.docs-main .card {
+  height: auto;
+  width: auto;
+}
+.docs-main .card a {
+  color: #000;
+}
+.docs-main .card li {
+  margin: auto;
+  padding: auto;
+}
+
+.docs-main h3 {
+  margin: 15px 0;
+}
+.docs-main .grid {
+  grid-template-columns: 1fr, 2fr;
+  align-items: flex-start;
+}
+.docs-main nav li {
+  justify-content: center;
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin: 10px 0;
+  border-bottom: 1px solid #333;
+}
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+.docs-main .card p {
+  padding: 5px;
+  font-size: 16px;
+}
+pre,
+code {
+  background: var(--dark-color);
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+/* Footer */
+.footer .social .fab {
+  margin: 0 3px;
+}
+/* Animations */
+@keyframes SlideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes SlideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes SlideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes SlideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* tablets & under size--HOME PAGE-- */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 110px;
+  }
+  .navbar .flex {
+    flex-direction: column;
+  }
+  .navbar ul {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  .grid,
+  .showcase .grid,
+  .cli .grid,
+  .clod .grid,
+  .stats .grid,
+  .footer .grid,
+  .docs-main .grid,
+  .docs-head .grid,
+  .features-head .grid,
+  .subheading .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+    /* take space as size as the showcase to prevent overlap with  text*/
+  }
+  .showcase-text {
+    text-align: center;
+    margin-top: 50px;
+    animation: SlideInFromTop 1s ease-in;
+  }
+  .showcase-form {
+    /* justify-content: center;
+    justify-items: center;  OR  ...*/
+    justify-self: center;
+    margin: auto;
+    animation: SlideInFromBottom 1s ease-in;
+  }
+  .cli .grid *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .features-head,
+  .subheading,
+  .docs-main,
+  .docs-head {
+    text-align: center;
+  }
+  .features-head img,
+  .subheading img,
+  .docs-head img {
+    justify-self: center;
+  }
+  .Features-main .grid {
+    overflow: hidden;
+  }
+  .Features-main .grid > *:first-child,
+  .Features-main .grid > *:nth-child(2) {
+    grid-column: 1;
+  }
+}
+/* mobiles */
+@media screen and (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+  .navbar .flex {
+    flex-direction: column;
+  }
+  .navbar ul {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  .grid,
+  .showcase .grid,
+  .cli .grid,
+  .clod .grid,
+  .stats .grid,
+  .footer .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .main .grid > *:first-child,
+  .main .grid > *:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .showcase {
+    height: auto;
+    /* take space as size as the showcase to prevent overlap with  text*/
+  }
+  .showcase-text {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .showcase-form {
+    /* justify-content: center;
+    justify-items: center;  OR  ...*/
+    justify-self: center;
+    margin: auto;
+  }
+  .cli .grid *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .features-head,
+  .subheading,
+  .docs-main,
+  .docs-head {
+    text-align: center;
+  }
+}
+
+/* tablets & under size--Features Page -- */

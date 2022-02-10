@@ -1,0 +1,215 @@
+/* Utilitis=classes that use everywhere */
+
+.container {
+  /* set content in almost center when the screen sice increase */
+  max-width: 1100px;
+  margin: 0px auto;
+  /* ..... */
+  overflow: auto;
+  padding: 0 40px;
+}
+.flex {
+  display: flex;
+  /* flex-direction: row;   as default */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 50% 20%;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  height: 100%;
+  justify-content: center;
+  justify-items: center;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  border-radius: 5px;
+}
+.btn:hover {
+  /* 1 is default value for scale */
+  transform: scale(0.98);
+}
+.btn-outline {
+  border: #fff solid 2px;
+  background-color: transparent;
+}
+/* dark button  & backgrounds */
+.btn-dark,
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn-secondary,
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+.btn-dark,
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+.btn-light,
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-dark {
+  color: var(--dark-color);
+}
+.text-light {
+  color: var(--light-color);
+}
+.btn-dark a,
+.bg-dark a,
+.btn-light a,
+.bg-light a,
+.btn-secondary a,
+.bg-secondary a,
+.btn-dark a,
+.bg-primary a {
+  color: #fff;
+}
+/* Alerts */
+.alert {
+  /* background: rgb(199, 175, 175); */
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: 5px;
+}
+.alert i {
+  margin-right: 3px;
+  font-size: 20px;
+}
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+.error-success {
+  background: var(--error-color);
+  color: #fff;
+}
+/* text sizes */
+.lead {
+  font-size: 20px;
+} /* used for p tag*/
+.sm {
+  font-size: 1rem;
+}
+.md {
+  font-size: 2rem;
+}
+.large {
+  font-size: 2.5rem;
+}
+.xl {
+  font-size: 4rem;
+}
+
+/* Text & margins */
+.text-center {
+  text-align: center;
+  text-transform: capitalize;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+.my-3 {
+  margin: 2rem 0;
+}
+.my-4 {
+  margin: 3rem 0;
+}
+.my-5 {
+  margin: 4rem 0;
+}
+/* margin all around */
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+.m-3 {
+  margin: 2rem;
+}
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+/* padding all around */
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+.p-3 {
+  padding: 2rem;
+}
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+/* padding top bottom */
+.py-1 {
+  padding: 1rem;
+}
+
+.py-2 {
+  padding: 1.5rem;
+}
+.py-3 {
+  padding: 2rem;
+}
+.py-4 {
+  padding: 3rem;
+}
+.py-5 {
+  padding: 4rem;
+}
